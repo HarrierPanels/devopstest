@@ -1,0 +1,1327 @@
+[basicnetworking]
+label = "Basic networking"
+
+    [[basicnetworking.questions]]
+    question = "What is the name for a connecting of computers and local networks located\nat a remote distance to share worldwide information resources"
+    answers = ["global network"]
+    alternatives = ["corporate network", "regional network", "local network"]
+
+    [[basicnetworking.questions]]
+    question = "What does network topology define"
+    answers = [
+        "A description of the network configuration, diagram\n     and connection of network devices.",
+    ]
+    alternatives = [
+        "Diagram of location of computers in the network.", 
+        "Scheme of interaction of switching equipment.", 
+        "Network security technology.",
+    ]
+
+    [[basicnetworking.questions]]
+    question = "Which of the following are types of network topology"
+    answers = ["Bus, ring, star"]
+    alternatives = ["Straight, parallel, cross", "Topological, logical, mixed", "Vector, singularity, parallelism"]
+
+    [[basicnetworking.questions]]
+    question = "What does the effectiveness of computer communication usually depend on"
+    answers = ["All choices"]
+    alternatives = ["Channel thruput", "Amount of the computer's RAM", "Processor productivity"]
+
+    [[basicnetworking.questions]]
+    question = "What makes it impossible to connect a computer to a local network"
+    answers = ["Lack of network adapter"]
+    alternatives = ["Channel thruput", "Limited hard disk size", "No serial port"]
+
+    [[basicnetworking.questions]]
+    question = "What of the following transmission media are usually used\nin computer networks"
+    answers = ["All choices"]
+    alternatives = ["Radio", "Twisted pair", "Optical fiber"]
+
+    [[basicnetworking.questions]]
+    question = "What is the advantage of using a mesh topology"
+    answers = ["High reliability and fault tolerance"]
+    alternatives = ["Minimum number of connections", "Simple network scaling", "Low cost"]
+
+    [[basicnetworking.questions]]
+    question = "What topology is the basis of the global Internet"
+    answers = ["Mesh"]
+    alternatives = ["Star", "Tree", "Ring"]
+
+    [[basicnetworking.questions]]
+    question = "What is a MAC address"
+    answers = ["the physical address of the network interface"]
+    alternatives = [
+        "physical address of the computer",
+        "logical address of the computer",
+        "the logical address to which all packets on the network are sent",
+    ]
+
+    [[basicnetworking.questions]]
+    question = "What type of address directly ensures the delivery of frames\nbetween computers within a shared local network"
+    answers = ["MAC address"]
+    alternatives = ["IP address", "Domain name", "NetBIOS name"]
+
+    [[basicnetworking.questions]]
+    question = "How many bits are the length of a MAC address"
+    answers = ["48"]
+    alternatives = ["32", "128", "64"]
+
+    [[basicnetworking.questions]]
+    question = "Which layer of the OSI model is a MAC address associated with"
+    answers = ["data-link"]
+    alternatives = ["physical", "network", "transport"]
+
+    [[basicnetworking.questions]]
+    question = "Which layer of the OSI model is an IP address associated with"
+    answers = ["network"]
+    alternatives = ["physical", "data-link", "transport"]   
+
+    [[basicnetworking.questions]]
+    question = "What type of address directly ensures the delivery of packets\nbetween computers on the global Internet"
+    answers = ["IP address"]
+    alternatives = ["MAC address", "WEB address", "TCP address"]    
+    
+    [[basicnetworking.questions]]
+    question = "What does the prefix in the IP address indicate"
+    answers = ["the number of leading ones in the subnet mask"]
+    alternatives = [
+        "the number of leading zeros in the subnet mask",
+        "the maximum number of computers in the subnet",
+        "the maximum number of subnets",
+    ]    
+    
+    [[basicnetworking.questions]]
+    question = "What are the parts of an IP address in IPv4"
+    answers = ["network ID", "host ID"]
+    alternatives = ["manufacturer ID of the network adapter", "The IP address is not structured"]        
+    
+    [[basicnetworking.questions]]
+    question = "What is the number of bytes in an IPv4 address"
+    answers = ["4"]
+    alternatives = ["32", "8", "64"]     
+    
+    [[basicnetworking.questions]]
+    question = "How is an IPv6 address displayed"
+    answers = ["as hexadecimal numbers separated by ':'"]
+    alternatives = [
+        "as decimal numbers separated by dots",
+        "as binary numbers separated by ':'",
+        "as binary-decimal numbers separated by '-'",
+    ]
+ 
+    [[basicnetworking.questions]]
+    question = "Which are the correct compact presentation forms for\nan IPv6 address FE80:0000:0000:0100:0000:0000:0000:0123"
+    answers = ["FE80:0:0:100::123", "FE80:0:0:100:0:0:0:123"]
+    alternatives = [
+        "FE80::100::123",
+        "FE80::1:0000:0000:0000:123",
+    ] 
+ 
+    [[basicnetworking.questions]]
+    question = "What is a network prefix"
+    answers = [
+        "decimal number equal to the number of bits\n     of the subnet mask set to one",
+    ]
+    alternatives = [
+        "a hexadecimal number equal to the number of bits\n     of the subnet mask set to one", 
+        "a decimal number equal to the number of bits\n     of the subnet mask set to zero", 
+        "the first octet of the IP address",
+    ] 
+ 
+    [[basicnetworking.questions]]
+    question = "Which addresses in any IPv4 network are always reserved?"
+    answers = ["network address", "broadcast address for this network"]
+    alternatives = [
+        "first available address for default gateway",
+        "last available address for default gateway",
+        "each odd address for better balancing",
+    ] 
+    hint = "In IPv4 there are two IPs that cannot be assigned\n      to any devices."
+    explanation = """
+    Each network or subnet has a reserved broadcast address 
+    that can be used by all participants of the network to 
+    send a broadcast. Broadcasts allow information and services 
+    to be transmitted to all devices and components of the 
+    network without the need to know their individual IP 
+    addresses. 
+        
+    Among other things, routers in a local area network use 
+    the broadcast IP to send HELLO packets to all endpoints, 
+    switches, and other routers to maintain interrelationships 
+    on the network and discover neighboring devices. These are 
+    the Network ID and the Broadcast IP address.
+    """
+
+    [[basicnetworking.questions]]
+    question = "What decimal number is equivalent to a binary number 11111111"
+    answers = ["255"]
+    alternatives = ["16", "8", "64"]  
+    
+    [[basicnetworking.questions]]
+    question = "Which of the following address ranges are private"
+    answers = ["172.16.0.0/12", "10.0.0.0/8", "192.168.0.0/16"]
+    alternatives = [
+        "1.1.1.0/30", 
+        "127.0.0.0/24", 
+        "169.254.0.0/16", 
+        "193.168.255.0/24",
+    ]
+    hint = "There are three private address ranges."
+    explanation = """
+    Address ranges to be used by private networks are:
+        
+    Class A: 10.0.0.0 to 10.255.255.255
+    Class B: 172.16.0.0 to 172.31.255.255
+    Class C: 192.168.0.0 to 192.168.255.255
+    """
+    
+    [[basicnetworking.questions]]
+    question = "How is the boundary between the network and host portions of\nan IPv4 address defined in modern networks"
+    answers = ["using the network prefix", "using the subnet mask"]
+    alternatives = ["using classes", "the border is fixed and unchanging"]  
+
+    [[basicnetworking.questions]]
+    question = "What is the advantage of using a router in a local network"
+    answers = ["All choices"]
+    alternatives = ["Logical structuring of the network", "Improving network security", "Broadcast traffic filtering"]  
+
+    [[basicnetworking.questions]]
+    question = "Why do you need a default gateway"
+    answers = ["All packets addressed outside the subnet\n     are sent to this IP address"]
+    alternatives = [
+        "All packets sent to this IP address are bounced back",
+        "A host with this IP address matches the domain\n     name and IP address",
+        "From this IP address, the computer receives the IP address,\n     subnet mask, and DNS server settings",
+    ] 
+
+    [[basicnetworking.questions]]
+    question = "There are 2 rules in the routing table: 1. 10.0.0.0 255.255.255.0 10.0.0.1\nand 2. 10.0.0.0 255.255.255.240 10.0.0.2. Packets for recipient 10.0.0.8\nwill be sent to the gateway"
+    answers = ["10.0.0.2"]
+    alternatives = ["10.0.0.1", "10.0.0.0", "255.255.255.0", "255.255.255.240"] 
+
+[networkprotocols]
+label = "Network Protocols"
+
+    [[networkprotocols.questions]]
+    question = "A broadcast address at the data-link layer is: "
+    answers = ["FF:FF:FF:FF:FF:FF"]
+    alternatives = ["255.255.255.255", "00:00:00:00:00:00", "0.0.0.0"]  
+
+    [[networkprotocols.questions]]
+    question = "Choose the correct statement: "
+    answers = ["The ARP protocol is designed to determine the MAC address\n     based on the IP address"]
+    alternatives = [
+        "ARP is running on port 53", 
+        "ARP is used in both IPv4 and IPv6 networks", 
+        "ARP protocol is designed to determine the IP address\n     based on the MAC address",
+    ] 
+    hint = "ARP works between Layers 2 and 3 of the OSI model."
+    explanation = """
+    Address Resolution Protocol (ARP) is a procedure for mapping a dynamic
+    IP address to a permanent physical machine address in a local area 
+    network (LAN). The physical machine address is also known as a media 
+    access control (MAC) address.
+    """
+
+    [[networkprotocols.questions]]
+    question = "The TCP protocol is: "
+    answers = ["reliable", "connection orientated"]
+    alternatives = ["lightweight", "correct", "faster then UDP"]  
+
+    [[networkprotocols.questions]]
+    question = "The sliding window mechanism in TCP is used for: "
+    answers = ["better utilization of network bandwidth"]
+    alternatives = [
+        "increasing the reliability of data delivery", 
+        "establishing a connection between the client and the server", 
+        "increasing the size of the data segment being transmitted",
+    ] 
+
+    [[networkprotocols.questions]]
+    question = "The set SYN flag indicates that: "
+    answers = ["the client and server go through the 'handshake' phase,\n     establishing the connection"]
+    alternatives = [
+        "the server waits for the data segment with the number of the first\n     byte specified in the Sequence number field", 
+        "the server waits for the data segment with the number of the first\n     byte specified in the Acknowledgment number field", 
+        "the client and server are ready to transmit data segments",
+    ] 
+    hint = "SYN (synchronize): Packets that are used to initiate\n      a connection."
+    explanation = """
+    SYN and ACK TCP flags are used for TCP 3 way handshake to establish 
+    connections. SYN (Synchronize sequence number). This indicates that 
+    the segment contains an ISN. During the TCP connection establishment 
+    process, TCP sends a TCP segment with the SYN flag set. Only the first 
+    packet from both the sender and receiver should have this flag set.
+    """
+    
+    [[networkprotocols.questions]]
+    question = "The UDP protocol is: "
+    answers = ["lightweight", "faster then TCP"]
+    alternatives = ["connection orientated", "correct"]  
+
+    [[networkprotocols.questions]]
+    question = "The UDP pseudo-header is used for: "
+    answers = ["checksum calculation"]
+    alternatives = ["formation of the IP header", "improvement of delivery reliability", "All choices"]  
+
+    [[networkprotocols.questions]]
+    question = "Choose the correct statements: "
+    answers = ["UDP transfers data faster than TCP", "UDP is used in streaming services and online games"]
+    alternatives = ["Minimum UDP header length is 6 bytes", "The checksum in UDP is mandatary"] 
+
+    [[networkprotocols.questions]]
+    question = "Choose the correct statements: "
+    answers = [
+        "Ping and traceroute use ICMP protocol", 
+        "If the recipient is out of network, the client will receive\n     an ICMP Destination unreachable message",
+    ]
+    alternatives = [
+        "If the ICMP message is lost, it is retransmitted", 
+        "ICMP is used to control the data rate on the network",
+    ] 
+
+    [[networkprotocols.questions]]
+    question = "Choose the correct statements: "
+    answers = [
+        "HTTP protocol runs on port 80 over TCP protocol", 
+        "Registered ports are assigned by IANA for specific service\n     upon application by a requesting entity",
+    ]
+    alternatives = [
+        "The total number of TCP ports is 1024", 
+        "Ephemeral ports used by system processes that provide\n     widely used types of network services",
+    ] 
+
+    [[networkprotocols.questions]]
+    question = "How is an IPv6 address displayed"
+    answers = ["as hexadecimal numbers separated by ':'"]
+    alternatives = [
+        "as decimal numbers separated by dots",
+        "as binary numbers separated by ':'",
+        "as binary-decimal numbers separated by '-'",
+    ]
+
+[subnetting]
+label = "Concept of Subnetting"
+
+    [[subnetting.questions]]
+    question = "What is the largest in capacity classful network"
+    answers = ["A"]
+    alternatives = ["B", "C", "D"] 
+
+    [[subnetting.questions]]
+    question = "The network class is determined by: "
+    answers = ["The first bits of the first byte of the IP address"]
+    alternatives = [
+        "Network mask/prefix", 
+        "The first bits of the last byte of the IP address", 
+        "Internet Services Provider",
+    ] 
+
+    [[subnetting.questions]]
+    question = "What class does an IP address 141.89.64.111 belong to"
+    answers = ["B"]
+    alternatives = ["A", "C", "D"] 
+
+    [[subnetting.questions]]
+    question = "Choose the correct statement: "
+    answers = ["All choices"]
+    alternatives = [
+        "Netmask cannot contain binary sequence 101", 
+        "The prefix indicates the number of ones in the netmask", 
+        "The mask allows to determine the address of the subnet\n     to which the IP address belongs",
+    ] 
+
+    [[subnetting.questions]]
+    question = "What is a binary form of decimal number 13"
+    answers = ["00001101"]
+    alternatives = ["10000001", "00000111", "00101000"] 
+
+    [[subnetting.questions]]
+    question = "What could be determined by the host IP address and subnet mask"
+    answers = ["All choices"]
+    alternatives = ["Network address", "Broadcast address", "Number of available addresses on a subnet"] 
+
+    [[subnetting.questions]]
+    question = "Formula for calculating the number of available host\naddresses in a subnet is: "
+    answers = ["2^(32-n)-2"]
+    alternatives = ["2*n+32", "n^2 +1", "2^32-n"] 
+    hint = "n = prefix"
+    explanation = """
+    In simple words the number of hosts in any network can be calculated 
+    with the formula = 2^x – 2, where x is the number of host ID bits in 
+    the IP address that equals 32 - n(prefix).  
+    """
+
+    [[subnetting.questions]]
+    question = "Which IP addresses are private"
+    answers = ["192.168.1.1", "172.16.1.1"]
+    alternatives = ["127.0.0.1", "169.254.1.1"] 
+
+    [[subnetting.questions]]
+    question = "Choose the correct statement: "
+    answers = ["Packets from private networks are not routed to the Internet"]
+    alternatives = [
+        "The use of private networks led to a rapid depletion\n     of the pool of IP addresses", 
+        "Access from a private network to the Internet is not possible", 
+        "All choices",
+    ] 
+
+    [[subnetting.questions]]
+    question = "The last byte of the network IP address is 160,\nthe last byte of the subnet mask is 224.\nCalculate the last byte of the broadcast address for this subnet"
+    answers = ["191"]
+    alternatives = ["192", "161", "159"] 
+    hint = "for .224 mask prefix is /27"
+
+    [[subnetting.questions]]
+    question = "Which IPv4 addresses can be assigned to devices"
+    answers = ["192.168.0.1/24", "172.168.20.111/8", "1.1.1.1/30", "100.100.1.0/15"]
+    alternatives = ["10.10.256.11/12", "10.255.255.255/16"]
+
+    [[subnetting.questions]]
+    question = "What does VLSM stand for"
+    answers = ["Variable Length Subnet Mask"]
+    alternatives = [
+        "Virtual Local Subnet Management", 
+        "Visual Localization Service Marker", 
+        "Virtual LAN Subnet Management",
+    ] 
+    explanation = """
+    VLSM stands for Variable Length Subnet Mask where the subnet design 
+    uses more than one mask in the same network which means more than 
+    one mask is used for different subnets of a single class A, B, C 
+    or a network. 
+    
+    It is used to increase the usability of subnets as they can be of 
+    variable size. It is also defined as the process of subnetting 
+    of a subnet.   
+    """
+
+    [[subnetting.questions]]
+    question = "The administrator has five departments to manage. These are\nsales department with [85] computers, purchase department with\n[30] computers, development department with [5] computers,\naccounts department with [10] computers and management department\nwith [60] computers.\n\nThere are also three WAN links that require two subnetworks with [2]\nhosts each. The administrator has IP 192.168.1.0/24, department wise.\nHe splits the network internally into subnetworks, so that each\nsubnetwork can be used by a single department. What would be the range\nfor host IPs used by the accounts department"
+    answers = ["192.168.1.225 - 192.168.1.238"]
+    alternatives = [
+        "192.168.1.10 - 192.168.1.20", 
+        "192.168.1.220 - 192.168.1.223", 
+        "192.168.1.211 - 192.168.1.224",
+    ] 
+    hint = "192.168.1.0/24 has 256 IPs available. Possible IP\n      segments: 128, 64, 32, 16, 8, 4."
+    explanation = """
+    For each segment select the block size that is greater than 
+    or equal to the actual requirement which is the sum of host 
+    addresses, broadcast addresses and network addresses. Make 
+    a list of subnets/IPs possible: /25 - 128 IPs, /26 - 64, 
+    /27 - 32, /28 - 16, /29 - 8, /30 - 4 (two subnets).
+    
+    Arrange all the segments in descending order based on the
+    block size that is from highest to lowest requirement. The
+    highest IP available has to be allocated to highest
+    requirement so the sales department gets 192.168.1.0/25
+    which has 126 valid addresses that can easily be available
+    for 85 hosts. The subnet mask used is 255.255.255.128.
+    
+    The next segment requires an IP to handle 60 hosts. The IP 
+    subnet with network number 192.168.1.128/26 is the next 
+    highest which can be assigned to 62 hosts thus fulfilling 
+    the requirement of development department. The subnet mask 
+    used is 255.255.255.192 and so forth.
+    """
+
+[vlan]
+label = "Virtual LAN"
+
+    [[vlan.questions]]
+    question = "VLANs are used for: "
+    answers = ["All choices"]
+    alternatives = [
+        "Networks segmentation based on factors such as\n     function, project team, or application", 
+        "Networks segmentation without regard for the\n     physical location of the user or device", 
+        "Network security improvement",
+    ] 
+
+    [[vlan.questions]]
+    question = "The total number of VLANs is: "
+    answers = ["4096"]
+    alternatives = ["256", "1024", "65535"] 
+
+    [[vlan.questions]]
+    question = "Select the correct location of the VLAN tag\nin the Ethernet frame: "
+    answers = ["Between source address and type"]
+    alternatives = ["Before Ethernet header", "After checksum", "Between data and checksum"] 
+
+    [[vlan.questions]]
+    question = "The VLAN tag length is: "
+    answers = ["4 bytes"]
+    alternatives = ["4 bits", "8 bit", "32 bytes"] 
+
+    [[vlan.questions]]
+    question = "Choose the correct statement: "
+    answers = ["Port in access mode works with untagged traffic"]
+    alternatives = [
+        "Switch port can work in access, trunk or dual mode", 
+        "To work with VLAN end devices must be able to read\n     the VLAN tag", 
+        "Tags allow packets to be routed between VLANs\n     without using router",
+    ] 
+
+    [[vlan.questions]]
+    question = "Choose the correct statement: "
+    answers = [
+        "VLANS are mutually isolated, and packets can only\n     pass between them through a router",
+        "Each VLAN is a broadcast domain, usually with its own\n     IP network",
+    ]
+    alternatives = [
+        "The device belongs to the VLAN solution only\n     by the port to which it is connected", 
+        "VLAN is the same as VPN",
+    ] 
+    explanation = """
+    Each VLAN is an individual broadcast domain because a broadcast 
+    in a given VLAN will never reach any ports in other VLANs. 
+    Normally, a port carries traffic only for the single VLAN 
+    to which it belongs. For a VLAN to span multiple switches on 
+    a single connection, a trunk is required to connect two switches. 
+    """
+
+[dhcp]
+label = "DHCP"
+
+    [[dhcp.questions]]
+    question = "What is DHCP"
+    answers = ["A network protocol that allows computers to automatically\n     obtain an IP address and other network settings\n     needed to operate on a TCP/IP network."]
+    alternatives = [
+        "The service of matching NetBIOS names of computers with\n     IP addresses of hosts.", 
+        "Service for updating operating systems and Microsoft products.", 
+        "A domain name system that associates domain names with\n     the IP addresses of computers corresponding to those domains.",
+    ] 
+
+    [[dhcp.questions]]
+    question = "What address allocation methods does the DHCP service use"
+    answers = ["All choices"]
+    alternatives = ["Manual Allocation", "Automatic Allocation", "Dynamic Allocation"] 
+
+    [[dhcp.questions]]
+    question = "What type of request is used to obtain an address via DHCP"
+    answers = ["broadcast"]
+    alternatives = ["multicast", "unicast", "anycast"] 
+
+    [[dhcp.questions]]
+    question = "What are DHCP Service Message Types"
+    answers = ["DHCPDISCOVER", "DHCPOFFER", "DHCPACK", "DHCPREQUEST"]
+    alternatives = ["DHCPORDER", "DHCPSERVER"] 
+    
+    [[dhcp.questions]]
+    question = "Choose the correct order of requests and responses\nwhen obtaining an IP address via DHCP: "
+    answers = ["DHCPDISCOVER - DHCPOFFER - DHCPREQUEST - DHCPACK"]
+    alternatives = [
+        "DHCPDISCOVER - DHCPOFFER - DHCPACK - DHCPREQUEST", 
+        "DHCPSERVER - DHCPDISCOVER - DHCPOFFER - DHCPACK", 
+        "DHCPDISCOVER - DHCPOFFER - DHCPORDER - DHCPACK",
+    ]     
+    
+    [[dhcp.questions]]
+    question = "What network settings can be obtained via DHCP"
+    answers = ["IP address", "Subnet mask", "DNS server address", "Default gateway"]
+    alternatives = ["Administrator Password", "MAC address"]     
+    
+    [[dhcp.questions]]
+    question = "What is the source IP address in the DHCPDISCOVER packet"
+    answers = ["0.0.0.0"]
+    alternatives = ["192.168.0.0", "255.255.255.255", "192.168.0.1"]     
+    
+    [[dhcp.questions]]
+    question = "What is the destination IP address in the DHCPDISCOVER packet"
+    answers = ["255.255.255.255"]
+    alternatives = ["192.168.0.255", "0.0.0.0", "192.168.0.1"]    
+    
+    [[dhcp.questions]]
+    question = "What are the benefits of Using DHCP"
+    answers = [
+        "DHCP minimizes configuration errors caused by manually\n     configuring an IP address, such as typos or address\n     conflicts.",
+        "Centralized and automatic TCP/IP configuration for all\n     clients on the network.",
+    ]
+    alternatives = [
+        "Improved network security.", 
+        "Reduction of service traffic.",
+    ] 
+    
+    [[dhcp.questions]]
+    question = "What protocol and ports does the DHCP service use"
+    answers = ["UDP 67/68"]
+    alternatives = ["TCP 67/68", "ICMP 1/2", "TCP 80/443", "TCP 53"]     
+    
+    [[dhcp.questions]]
+    question = "What identifier does the DHCP server use to reserve\nan IP address for the client"
+    answers = ["MAC address of the network adapter of client\n     computer"]
+    alternatives = [
+        "Network interface name of the client computer", 
+        "Computer name of the client computer", 
+        "All choices",
+    ]    
+
+    [[dhcp.questions]]
+    question = "What are the methods in which IPv6 global unicast\naddresses can be assigned without special server"
+    answers = ["SLAAC and DHCPv6", "Stateless Address Autoconfiguration"]
+    alternatives = ["DNS", "Stateful DHCPv6"] 
+
+    [[dhcp.questions]]
+    question = "When a computer sends DHCP requests and does not\nreceive a response, from which subnet does the computer\nautomatically generate an IP address"
+    answers = ["169.254.0.0/16"]
+    alternatives = ["10.0.0.0/8", "172.16.0.0/12", "192.168.0.0/16"] 
+
+[dns]
+label = "DNS"
+
+    [[dns.questions]]
+    question = "What is DNS"
+    answers = ["The system, which associates domain names with the\n     IP addresses of hosts."]
+    alternatives = [
+        "A database that stores information about users, PCs, servers,\n     network and peripheral devices.", 
+        "The service of matching NetBIOS names of computers with IP\n     addresses of hosts.", 
+        "Service for updating operating systems and Microsoft products",
+    ]  
+
+    [[dns.questions]]
+    question = "What protocols and ports are used by DNS"
+    answers = ["TCP/UDP 53"]
+    alternatives = ["TCP/ICMP 80", "TCP/UDP 8080", "TCP/UDP 123"] 
+
+    [[dns.questions]]
+    question = "What are the types of queries that the DNS service uses"
+    answers = ["Recursive", "Iterative", "Reverse"]
+    alternatives = ["Authoritative", "Caching"] 
+
+    [[dns.questions]]
+    question = "What are the types of DNS servers"
+    answers = ["Recursive resolver", "Root nameserver", "TLD nameserver", "Authoritative nameserver"]
+    alternatives = ["Remote nameserver", "Iterative nameserver"] 
+
+    [[dns.questions]]
+    question = "Choose the right DNS query definitions: "
+    answers = [
+        "A recursive query sends a domain name to the DNS server\n     and asks to return the IP address of the requested domain.\n     In this case, the server can access other DNS servers.",
+        "An iterative query sends a domain name to a DNS server\n     and asks to return either the IP address of that domain\n     or the name of another DNS server.",
+        "The reverse request sends an IP and asks to return the\n     domain name.",       
+    ]
+    alternatives = ["An iterative request expects a final response\n     from the server to which it is directed."]   
+
+    [[dns.questions]]
+    question = "A DNS cache is used for: "
+    answers = ["reducing of request service time", "reducing the workload of authoritative servers"]
+    alternatives = ["DNS service security improvements", "reducing the number of DNS servers"]     
+ 
+    [[dns.questions]]
+    question = "What are the DNS Records types"
+    answers = ["A", "NS", "AAAA", "SOA"]
+    alternatives = ["MAIL", "COMP", "BBBB"] 
+
+    [[dns.questions]]
+    question = "What is the DNS Record used as a 'reverse record'"
+    answers = ["PTR"]
+    alternatives = ["A", "NS", "SOA", "CNAME"] 
+    hint = "For mapping IP addresses to domain names."
+
+    [[dns.questions]]
+    question = "What is the nameserver that contains information specific\nto the domain name it serves"
+    answers = ["Authoritative nameserver"]
+    alternatives = ["Recursive resolver", "Root nameserver", "TLD nameserver"] 
+    hint = "When a recursive resolver receives a response from\n      a TLD nameserver, that response will direct the resolver to\n      that nameserver."
+    explanation = """
+    The authoritative nameserver is usually the resolver’s last 
+    step in the journey for an IP address. The authoritative 
+    nameserver contains information specific to the domain name 
+    it serves (e.g. google.com) and it can provide a recursive 
+    resolver with the IP address of that server found in the DNS 
+    A record, or if the domain has a CNAME record (alias) it will 
+    provide the recursive resolver with an alias domain, at which 
+    point the recursive resolver will have to perform a whole new 
+    DNS lookup to procure a record from an authoritative nameserver 
+    (often an A record containing an IP address). Cloudflare DNS 
+    distributes authoritative nameservers, which come with Anycast 
+    routing to make them more reliable. 
+    """
+
+    [[dns.questions]]
+    question = "What is the DNS Record that maps a domain name\nto a list of mail exchange servers"
+    answers = ["MX"]
+    alternatives = ["A", "NS", "PTR", "CNAME", "MAILEX"] 
+    
+    [[dns.questions]]
+    question = "What utility can be used to identify problems\nassociated with DNS name resolution"
+    answers = ["Nslookup"]
+    alternatives = ["Ping", "Netstat", "Tracert"] 
+
+    [[dns.questions]]
+    question = "Choose the correct statements about DNS security extensions: "
+    answers = [
+        "It strengthens authentication in DNS using digital signatures",
+        "Every DNS zone has a public/private key pair",
+        "The zone owner uses the zone's private key to sign DNS data",       
+    ]
+    alternatives = ["DNS queries and responses themselves are cryptographically signed"] 
+
+    [[dns.questions]]
+    question = "Choose the correct sequence of queries to DNS servers\nto resolve a domain name"
+    answers = ["Client - Recursive resolver - Root- TLD - Authoritative"]
+    alternatives = [
+        "Client - Root- TLD - Recursive resolver - Authoritative", 
+        "Client - TLD - Root- Recursive resolver - Authoritative", 
+        "Client - Recursive resolver - Authoritative - Root- TLD",
+    ]  
+
+    [[dns.questions]]
+    question = "DNS is an acronym for: "
+    answers = ["Domain Name System"]
+    alternatives = [
+        "Domain Name Servers", 
+        "Domain Name Service", 
+        "Domain Name Security",
+    ]   
+
+[linux]
+label = "CentOS Linux"
+
+    [[linux.questions]]
+    question = "Please check Linux distributions in the following OS list: "
+    answers = ["CentOS", "Ubuntu", "RHEL"]
+    alternatives = ["Microsoft Windows", "MacOS"] 
+
+    [[linux.questions]]
+    question = "What is CentOS default package manager"
+    answers = ["yum"]
+    alternatives = ["apts", "apk", "brew"] 
+
+    [[linux.questions]]
+    question = "Which of the following could be configured during CentOS installation"
+    answers = ["All choices"]
+    alternatives = ["network", "users", "disk partitioning", "time", "language"] 
+
+    [[linux.questions]]
+    question = "Could CentOs be installed on both bare metal and hypervisor"
+    answers = ["True"]
+    alternatives = ["False"] 
+
+    [[linux.questions]]
+    question = "The follwing shells are present in CentOS installation by default: "
+    answers = ["bash", "sh"]
+    alternatives = ["ksh", "zsh", "csh"] 
+
+    [[linux.questions]]
+    question = "man command is used to: "
+    answers = ["display command usage examples", "displaying information about a command"]
+    alternatives = ["user creation", "listing contents of current directory", "groups creation"] 
+
+    [[linux.questions]]
+    question = "ls -la ~ command does the following: "
+    answers = ["lists contents of user's home directory including\n     hidden files and file attributes"]
+    alternatives = [
+        "lists contents of current directory", 
+        "lists contents of user's home directory", 
+        "lists contents of current direcory including hidden files",
+    ] 
+
+    [[linux.questions]]
+    question = "cd .. command does the following: "
+    answers = ["changes context to the parent directory of the current directory"]
+    alternatives = [
+        "creates .. directory", 
+        "renames current directory", 
+        "changes context to user's home directory",
+    ] 
+
+    [[linux.questions]]
+    question = "Linux file system is represented as: "
+    answers = ["directory structure"]
+    alternatives = ["logical disks structure"] 
+
+    [[linux.questions]]
+    question = "New storage devices can be mounted: "
+    answers = ["to any directory on the system"]
+    alternatives = ["as a separate logical disk in which directories can\n     be created"] 
+
+    [[linux.questions]]
+    question = "File named 'link' was created using 'ln -s file link' command.\nFile 'file' was deleted afterwards. Attempting to open\n'link' file will: "
+    answers = ["throw an error because soft links depend on original file"]
+    alternatives = ["open the file because hard links do not depend on original file"] 
+
+    [[linux.questions]]
+    question = "Command 'cp ../dir/ ./' will: "
+    answers = ["throw an error"]
+    alternatives = [
+        "copy folder dir to current directory", 
+        "copy folder dir to user's home directory", 
+        "move folder dir and all its files to current directory",
+    ] 
+
+    [[linux.questions]]
+    question = "File 'script' was created. To make this file executable we need to: "
+    answers = ["grant +x permissions using chmod command"]
+    alternatives = [
+        "add .sh extention to file name", 
+        "add #!/bin/bash at the beginning of the file", 
+    ] 
+
+    [[linux.questions]]
+    question = "Following entities are part of Linux permission model: "
+    answers = ["users", "groups"]
+    alternatives = ["organizational units", "subgroups"] 
+
+    [[linux.questions]]
+    question = "What do 754 permissions on a file mean"
+    answers = ["owner can read, write, execute; owner group can read,\n     execute; everyone else can read"]
+    alternatives = [
+        "owner can read, execute; owner group can read;\n     everyone else can execute", 
+        "owner can read, write, execute; owner group can\n     read, write; everyone else can write", 
+    ] 
+
+    [[linux.questions]]
+    question = "Which tools can be used for memory diagnostics"
+    answers = ["top", "free"]
+    alternatives = ["iostat", "netstat"] 
+
+    [[linux.questions]]
+    question = "File in Linux can have this many owner groups: "
+    answers = ["one"]
+    alternatives = ["two - primary and secondary"] 
+
+    [[linux.questions]]
+    question = "Which of the following directives in systemd unit file\nare required for unit to be valid"
+    answers = ["ExecStart"]
+    alternatives = ["Alias", "ExecStop", "Restart"] 
+
+
+    [[linux.questions]]
+    question = "/etc/resolv.conf file is responsible for: "
+    answers = ["specifying the IP addresses of DNS servers and the search\n     domain"]
+    alternatives = [
+        "resolving hostnames that cannot be resolved any other way", 
+        "specifyinh routing and host information for all network\n     interfaces", 
+    ] 
+
+    [[linux.questions]]
+    question = "The following ssh config file is present on the system:\nHost test\nHostName 192.168.0.1\nIdentityFile ~/.ssh/test.pem\nWhich commands will allow us to ssh to 'test' host\nunder root user"
+    answers = ["ssh -i ~/.ssh/test.pem root@192.168.0.1", "ssh root@test"]
+    alternatives = ["ssh test", "ssh -i ~/.ssh/test.pem test", "ssh root@192.168.0.1"] 
+
+[bash]
+label = "Bash"
+
+    [[bash.questions]]
+    question = "What shebang is wrong"
+    answers = ["All choices are valid"]
+    alternatives = [
+        "#!/bin/bash", 
+        "#!/usr/bin/env bash", 
+        "#!/bin/sh", 
+        "#!/usr/bin/env python3",
+        "All choices are invalid",
+    ] 
+
+    [[bash.questions]]
+    question = "Which special variable would store the exit status for all commands"
+    answers = ["$?"]
+    alternatives = ["$0", "$@", "$$", "$#"] 
+
+    [[bash.questions]]
+    question = "How to Exit immediately if a command exits with a non-zero\nstatus and Print commands and their arguments as they\nare executed"
+    answers = ["set -ex"]
+    alternatives = ["set +ex", "set +e -x", "set -e +x", "set -ep"] 
+
+    [[bash.questions]]
+    question = "How many lines with Hello are in output:\ngreet() { for i in `seq $1`; do echo Hello $i; done } && greet '2 5'"
+    answers = ["4"]
+    alternatives = ["2", "3", "5", "An error is displayed"] 
+    hint = "seq prints a sequence of numbers"
+    explanation = """
+    seq command is used to print a sequence of numbers from FIRST to LAST 
+    in steps of INCREMENT. By default, each number is printed on a separate 
+    line.
+    """
+
+    [[bash.questions]]
+    question = "What does > do in the BASH shell"
+    answers = ["Redirects output to a new or existing file and writes\n     to the beginning of the file"]
+    alternatives = [
+        "Redirects output to a new or existing file and appends to the\n     end of the file", 
+        "Redirects output to an new file only", 
+        "Redirects output to an existing file only", 
+    ] 
+
+    [[bash.questions]]
+    question = "Which of the following commands would try to stop a process"
+    answers = ["kill PID"]
+    alternatives = ["stop PID", "exit PID", "ps PID"] 
+
+    [[bash.questions]]
+    question = "Which of the following commands would set the default rw\npermission to all users on every file which is created in\nthe current shell"
+    answers = ["umask 0000"]
+    alternatives = ["umask 888", "umask 777", "umask 555"] 
+
+    [[bash.questions]]
+    question = "Command used to count the number of characters in a file is: "
+    answers = ["wc"]
+    alternatives = ["word", "char", "numchar"] 
+
+    [[bash.questions]]
+    question = "I want to monitor a continuously updating log file. What command\ncan be used to most efficiently achieve this"
+    answers = ["tail –f filename"]
+    alternatives = [
+        "grep -v grep filename", 
+        "less filename", 
+        "cat filename", 
+    ] 
+    explanation = """
+    tail –f filename will cause only the default last 10 lines to be 
+    displayed on std output which continuously shows the updating part 
+    of the file. 
+    """
+
+    [[bash.questions]]
+    question = "I want to read all input to some command from file1, direct all\noutput to file2, and error to file 3, how can I achieve this"
+    answers = ["command < file1 1>file2 2>file3"]
+    alternatives = [
+        "command output='file1' input='file2' error='file3'", 
+        "command (file1 file2 file3) + (output, input, error)", 
+        "command echo$(output='file1', input='file2', error='file3')", 
+    ] 
+
+    [[bash.questions]]
+    question = "How will you emulate wc –l using awk"
+    answers = ["awk 'END {print NR}' filename"]
+    alternatives = [
+        "awk '{print}' filename", 
+        "awk '{print $1}' filename", 
+        "awk '{print $NF-1}' filename", 
+    ] 
+
+    [[bash.questions]]
+    question = "How would you find the total disk space used by user1"
+    answers = ["du -s /home/user1"]
+    alternatives = [
+        "df -h user1", 
+        "free /home/user1", 
+        "dsk -sp user1", 
+    ] 
+
+[git]
+label = "Version Control with GIT"
+
+    [[git.questions]]
+    question = "Where are a pair of ssh keys put to when generating on\nWindows via ssh-keygen?"
+    answers = ["C:/Users/User_Name/.ssh"]
+    alternatives = ["C:/ssh", "C:/Program Data/.ssh", "C:/Windows/system32/.ssh"] 
+    hint = "This is a hidden folder about Unix rules (the name begins with a dot)"
+
+    [[git.questions]]
+    question = "Is it possible to use ssh-keygen to create an ssh key without a password"
+    answers = ["Yes, just by pressing Enter instead of entering a password"]
+    alternatives = ["No, password is required, it's ssh"] 
+
+    [[git.questions]]
+    question = "Which of the two ssh keys cannot be transferred to anyone"
+    answers = ["Private (file id_rsa)"]
+    alternatives = ["Public (file id_rsa.pub)"] 
+    explanation = """
+    The private key cannot be transferred - otherwise the recipient will 
+    be able to sign commits on your behalf and send it to your repositories. 
+    """
+
+    [[git.questions]]
+    question = "Which command do you need to use to specify your user.name\nand user.email in git"
+    answers = ["git config"]
+    alternatives = ["git uname", "git status", "git settings"] 
+
+    [[git.questions]]
+    question = "What command can be used to 'pull' the changes from the remote\nrepository to the local one"
+    answers = ["git pull"]
+    alternatives = ["git get", "git update", "git push"] 
+
+    [[git.questions]]
+    question = "What combination of commands in git bash will be the right one\nto add a new file to index, commit and submit to github"
+    answers = ["git add, git commit, git push"]
+    alternatives = ["git index, git commit, git push", "git commit, git pull", "git commit, git push"] 
+    hint = "Start by adding changes to index using the\n      git add command."    
+    explanation = """
+    First you add files through add, then commit and synchronize the 
+    local repository with the remote git push. 
+    """
+
+    [[git.questions]]
+    question = "The file .git/refs/heads/master contains the following text:\n'5c2fdbaff3b0b9b5eae3c48047aafcee2201e5c4'. What does it mean"
+    answers = ["This is sha1 of the last commit in the master branch"]
+    alternatives = [
+        "This is an unchanged checksum of the master branch", 
+        "This is a blob corresponding to the last commit in the master\n     branch", 
+        "This is a random number generated for the master branch when it\n     was created", 
+    ]  
+    hint = "This is not a random number."  
+    explanation = """
+    If you have the hash for a commit, you can use the git show command 
+    to display the changes for that single commit. The output is identical 
+    to each individual commit when using git log -p. 
+    """
+
+    [[git.questions]]
+    question = "What do the directory names in the .git / objects folder mean"
+    answers = ["The first two characters from sha1"]
+    alternatives = [
+        "Version of the object (the higher the number, the younger\n     the version)", 
+        "Version of the object (the higher the number, the older\n     the version)", 
+        "Nothing, this is a random value generated by git", 
+    ] 
+
+    [[git.questions]]
+    question = "How to get rid of all unknown git files"
+    answers = ["git clean"]
+    alternatives = ["git remove-all", "git clear", "git purge"] 
+
+    [[git.questions]]
+    question = "You made a commit and forgot to add a couple of changes. The task is\nto add data to the already created commit. Choose all solutions: "
+    answers = ["git commit --amend", "git gui, then I will select the amend last commit checkbox"]
+    alternatives = ["git update", "git add", "git reset --hard HEAD^^"] 
+
+    [[git.questions]]
+    question = "You want to delete the last commit by placing its contents in the file\nsystem. Which command will accomplish this task"
+    answers = ["git reset --mixed HEAD~1"]
+    alternatives = ["git reset --hard HEAD~1", "git reset --hard HEAD^^", "git reset --soft HEAD~1"] 
+
+    [[git.questions]]
+    question = "What is the best way to remove a commit from a remote repository"
+    answers = ["git revert"]
+    alternatives = ["git rerere", "git delete -r", "git push -f HEAD~1"] 
+
+    [[git.questions]]
+    question = "What will happen to the file song.txt if you call\n'git checkout - song.txt'"
+    answers = ["The contents of the file will be restored to the latest known\n     git version"]
+    alternatives = [
+        "Nothing will happen. Checkout is for changing branches", 
+        "The file will be deleted from disk", 
+        "We will go to the song.txt branch", 
+    ] 
+
+    [[git.questions]]
+    question = "What needs to be added to .gitignore to hide all Microsoft Word\nfiles with the extension .doc"
+    answers = ["*.doc"]
+    alternatives = ["~doc.", "/doc", "!*.doc", "doc", "!*$%"] 
+
+    [[git.questions]]
+    question = "How much does branch occupy in the file system"
+    answers = ["41 bytes"]
+    alternatives = [
+        "Proportional to the size of the project. If the project is 10 MB\n     in one branch, then when you create the second, it will become 20 MB.", 
+        "1024 Kb", 
+    ] 
+
+    [[git.questions]]
+    question = "How to view the list of branches in the repository"
+    answers = ["git branch --all"]
+    alternatives = [
+        "git show branch", 
+        "git branch show", 
+        "git checkout branch", 
+    ] 
+
+    [[git.questions]]
+    question = "How to exit vi saving changes"
+    answers = [":wq"]
+    alternatives = [":q!", "Ctrl+S", "Ctrl+C", "doc", "!*$%"] 
+    hint = "The necessary commands begin with a colon."  
+
+    [[git.questions]]
+    question = "How to resolve a conflict when merging branches (merge conflict)"
+    answers = ["Fix the content of files with conflicts, make a commit of changes"]
+    alternatives = [
+        "Fix the contents of files with conflicts, make git merge --abort", 
+        "Use git reset --hard HEAD", 
+        "Make a new copy of the project via git clone. This copy is broken\n     and will never work.", 
+    ] 
+    hint = "First you need to fix the contents of files,\n      where there is a conflict."  
+    explanation = """
+    You could also use git merge --continue.  
+    """
+
+    [[git.questions]]
+    question = "You create a new branch 'feature'. Then you make 3 new commits\nin the new branch. Than you return to the master branch and make a new\ncommit there. What kind of merge will happen if you git merge feature\nin the master branch"
+    answers = ["Non fast-forward merge"]
+    alternatives = ["Fast-forward merge", "Cherry-pick", "The merge is impossible"] 
+
+    [[git.questions]]
+    question = "In the master branch you have 3 commits A, B, & C. You create a new\nbranch 'feature'. Then you make 3 new commits in the new branch D, E, & F.\nWhat will be the HEAD pointer of the master branch after\nyou do the merge feature in master"
+    answers = ["F"]
+    alternatives = ["A", "B", "C", "D", "E", "New commit G"]
+
+    [[git.questions]]
+    question = "You are in the feature branch. The project manager asks you to urgently\nfix the defect in the master branch. You have unsaved changes\nthat you are not ready to commit. What will be the procedure"
+    answers = ["git stash, git checkout master, fixing the defect, returning to\n     the feature branch"]
+    alternatives = [
+        "git clean -xdf, git checkout master, fixing the defect, returning to\n     the feature branch", 
+        "git add., git checkout master, fixing the defect, returning to\n     the feature branch", 
+        "git checkout., git checkout master, fixing the defect, returning to\n     the feature branch", 
+    ] 
+    hint = "clean -xdf will remove all new files that were made in feature"  
+    explanation = """
+    Use git stash when you want to record the current state of the working 
+    directory and the index, but want to go back to a clean working directory. 
+    The command saves your local modifications away and reverts the working 
+    directory to match the HEAD commit.  
+    """
+
+    [[git.questions]]
+    question = "You want to mark the current commit with the tag 'release1.0'.\nWhat is the right command for it in the console"
+    answers = ["git tag release1.0"]
+    alternatives = ["git --tag release1.0", "git add tag release1.0", "git addtag release1.0"]
+
+    [[git.questions]]
+    question = "What is the difference between git stash pop and git stash apply?\nBoth will transfer the changes saved in stash back to the working\ndirectory, but what is the difference"
+    answers = ["pop will delete stash after returning the changes saved in it, apply -\n     will leave it"]
+    alternatives = [
+        "No difference, this is alias. the commands are identical", 
+        "apply will remove stash after returning the changes saved in it,\n     pop will leave it", 
+        "apply will apply stash to the project, pop - will list available\n     stashes for application", 	
+    ] 
+
+    [[git.questions]]
+    question = "Which command can help you configure the git so that fetch and push go\nto another remote repository"
+    answers = ["git remote"]
+    alternatives = ["git repository", "git config", "That is imposible"]
+
+[python]
+label = "Python"
+
+    [[python.questions]]
+    question = "Which built-in function can get information from the user"
+    answers = ["input"]
+    alternatives = ["get", "print", "write"]
+
+    [[python.questions]]
+    question = "What's the purpose of the built-in zip() function"
+    answers = ["To iterate over two or more sequences at the same time"]
+    alternatives = [
+        "To combine several strings into one",
+        "To compress several files into one archive",
+        "To get information from the user",
+    ]
+
+    [[python.questions]]
+    question     = "What does dict.get(key) return if key isn't found in dict"
+    answers      = ["None"]
+    alternatives = ["key", "True", "False"]
+
+    [[python.questions]]
+    question = "How do you iterate over both the indices and elements in an iterable"
+    answers = ["enumerate(iterable)"]
+    alternatives = [
+        "enumerate(iterable, start=1)",
+        "range(iterable)",
+        "range(iterable, start=1)",
+    ]
+
+    [[python.questions]]
+    question = "What's the official name of the := operator"
+    answers = ["Assignment expression"]
+    alternatives = [
+        "Named expression",
+        "Walrus operator",
+        "Colon equals operator",
+    ]
+
+    [[python.questions]]
+    question = "What's one effect of calling random.seed(42)"
+    answers = ["The random numbers are reproducible."]
+    alternatives = [
+        "The random numbers are more random.",
+        "The computer clock is reset.",
+        "The first random number is always 42.",
+    ]
+
+    [[python.questions]]
+    question     = "Which version of Python is the first with TOML support built in"
+    answers      = ["3.11"]
+    alternatives = ["3.9", "3.10", "3.12"]
+
+    [[python.questions]]
+    question     = "How can you run a Python script named epamtest.py"
+    answers      = ["python epamtest.py", "python -m epamtest"]
+    alternatives = ["python epamtest", "python -m epamtest.py"]
+    hint         = "One option uses the filename, and the other uses\n      the module name."
+
+    [[python.questions]]
+    question     = "What's the name of the list-like data structure in TOML"
+    answers      = ["Array"]
+    alternatives = ["List", "Sequence", "Set"]
+
+    [[python.questions]]
+    question = "What's a PEP"
+    answers = ["A Python Enhancement Proposal"]
+    alternatives = [
+        "A Pretty Exciting Policy",
+        "A Preciously Evolved Python",
+        "A Potentially Epic Prize",
+    ]
+    hint = "PEPs are used to evolve Python."
+    explanation = """
+    Python Enhancement Proposals (PEPs) are design documents that provide
+    information to the Python community. PEPs are used to propose new features
+    for the Python language, to collect community input on an issue, and to
+    document design decisions made about the language.
+    """
+
+    [[python.questions]]
+    question = "How can you add a docstring to a function"
+    answers = [
+        "By writing a string literal as the first statement in the function",
+        "By assigning a string to the function's .__doc__ attribute",
+    ]
+    alternatives = [
+        "By using the built-in @docstring decorator",
+        "By returning a string from the function",
+    ]
+    hint = "They are parsed from your code and stored on the\n      function object."
+    explanation = """
+    Docstrings document functions and other Python objects. A docstring is a
+    string literal that occurs as the first statement in a module, function,
+    class, or method definition. Such a docstring becomes the .__doc__ special
+    attribute of that object. See PEP 257 for more information.
+    There's no built-in @docstring decorator. Many functions naturally return
+    strings. Such a feature can therefore not be used for docstrings.
+    """
+
+    [[python.questions]]
+    question = "When was the first public version of Python released"
+    answers = ["February 1991"]
+    alternatives = ["January 1994", "October 2000", "December 2008"]
+    hint = "The first public version was labeled version 0.9.0."
+    explanation = """
+    Guido van Rossum started work on Python in December 1989. He posted
+    Python v0.9.0 to the alt.sources newsgroup in February 1991. Python
+    reached version 1.0.0 in January 1994. The next major versions,
+    Python 2.0 and Python 3.0, were released in October 2000 and December
+    2008, respectively.
+    """
+
+    [[python.questions]]
+    question = "Which data types used in python"
+    answers = ["All choices"]
+    alternatives = [
+        "Text Types (str)",
+        "Boolean Type (bool)",
+        "Sequence types (list, tuple, range)",
+    ]
+    explanation = """
+    Python contains Text types, Boolean, and also provides some built-in data 
+    types, in particular, dict , list , set and frozenset, and tuple. The str 
+    class is used to hold Unicode strings, and the bytes and bytearray classes 
+    are used to hold binary data.
+    """
+
+    [[python.questions]]
+    question = "In order to create a variable should I set its type"
+    answers = ["No, but I can specify or change it dynamically with casting"]
+    alternatives = [
+        "Yes when you create a variable you should provide its type",
+    ]
+    explanation = """
+    Python is a language with dynamic typing, and all variables can be casted 
+    to any selected type. 
+    """
+
+    [[python.questions]]
+    question     = "Which type is ordered, changeable, and allow duplicate values"
+    answers      = ["List"]
+    alternatives = ["Tuple", "Dictionary", "Set", "All choices"]
+    explanation = """
+    Lists are one of 4 built-in data types in Python used to store collections 
+    of data, the other 3 are Tuple, Set, and Dictionary, all with different 
+    qualities and usage. List items are ordered, changeable, and allow 
+    duplicate values. List items are indexed, the first item has index [0], 
+    the second item has index [1] etc.
+    """
+
+    [[python.questions]]
+    question     = "Which type could be unpacked"
+    answers      = ["All choices"]
+    alternatives = ["Tuple", "Dictionary", "Set", "List"]
+    explanation = """
+    Python allows a tuple (or list) of variables to appear on the left 
+    side of an assignment operation. Each variable in the tuple can 
+    receive one value (or more, if we use the * operator) from an iterable 
+    on the right side of the assignment.  
+    
+    In the context of unpacking in Python, the ** operator is called the 
+    dictionary unpacking operator. The use of this operator was extended by 
+    PEP 448. Now, we can use it in function calls, in comprehensions and 
+    generator expressions, and in displays.
+    
+    Finally, we can also use set objects in unpacking operations. However, 
+    since sets are unordered collection, the order of the assignments can 
+    be sort of incoherent and can lead to subtle bugs. 
+    """
+
+    [[python.questions]]
+    question = "Which command used for showing something on screen"
+    answers = ["print()"]
+    alternatives = [
+        "str()",
+        "cout()",
+        "show()",
+    ]
+
+    [[python.questions]]
+    question = "Which statements below are true"
+    answers = [
+        "Using for loop I can get access to each item of the list",
+        "Modules can be used to store functions",
+        "Python has automatic memory management",        
+    ]
+    alternatives = [
+        "Python nested IF statements are not allowed",
+        "Python can't be used in multi-thread computing",
+        "Python won't work on linux and macOS",
+    ]
+
+    [[python.questions]]
+    question     = "Which statement is used for logical expressions and operators"
+    answers      = ["If"]
+    alternatives = ["For", "While", "Bytes", "Int"]
+    explanation = """
+    In Python Logical operators are used on conditional statements (either 
+    True or False). They perform Logical AND, Logical OR and Logical NOT 
+    operations. 
+    """
+
+    [[python.questions]]
+    question     = "How do you create a copy of the Python list"
+    answers      = ["list2 = list1.copy()"]
+    alternatives = ["list2 = list1", "list2 = copy(list1)", "copy (list1, list2)", "not possible"]
+
+    [[python.questions]]
+    question     = "How do you cast float into integer value but with understanding that\nPython has dynamic typing"
+    answers      = ["int(value)"]
+    alternatives = ["str(int(value))", "print(int(value)", "it's already a number", "int = float"]
+
+    [[python.questions]]
+    question     = "What are the Python disadvantages"
+    answers      = ["Speed", "Scripts are required more testing", "Memory consumption"]
+    alternatives = ["Hard to understand code", "Incompatibility"]
+
+    [[python.questions]]
+    question     = "What are the Python benefits"
+    answers      = ["Interpretable", "Interactive", "Ported", "Expandable", "Object oriented"]
+    alternatives = ["Difficult"]
+    
+    [[python.questions]]
+    question     = "How to install a Python module"
+    answers      = ["pip install <module>"]
+    alternatives = ["pip <module>", "pip pull <module>", "python -m pip install <module>", "All choices"]
+      
+    [[python.questions]]
+    question     = "What is part of Python"
+    answers      = ["All choices"]
+    alternatives = [
+        "Dynamic typing",
+        "Automatic memory management",
+        "Exception Handling",
+        "Milti-thread computing",        
+    ]   
+    
+    [[python.questions]]
+    question     = "Where can I write Python scripts"
+    answers      = ["Any text editor can be used"]
+    alternatives = ["Only Pycharm can be used"] 
