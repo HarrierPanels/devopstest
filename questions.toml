@@ -800,6 +800,33 @@ label = "CentOS Linux"
     answers = ["ssh -i ~/.ssh/test.pem root@192.168.0.1", "ssh root@test"]
     alternatives = ["ssh test", "ssh -i ~/.ssh/test.pem test", "ssh root@192.168.0.1"] 
 
+    [[linux.questions]]
+    question = "What steps are involved in creating an SSH session"
+    answers = [
+        "Client contacts server to initiate a connection", 
+        "The server responds by sending the client a public cryptography\n     key.", 
+        "The server negotiates parameters and opens a secure channel for\n     the client.", 
+        "The user, through their client, logs into the server.",       
+    ]
+    alternatives = [
+        "The remote client generates a new ssh key pair to ensure the\n     encrypted connection.", 
+        "Once an SSH client contacts a server it is prompted to change\n     the SSH key password.",      
+    ]
+    explanation = """
+    Event Sequence of an SSH Connection:
+    
+    A cryptographic handshake is made so that the client can 
+    verify that it is communicating with the correct server.
+
+    The transport layer of the connection between the client 
+    and remote host is encrypted using a symmetric cipher.
+
+    The client authenticates itself to the server.
+
+    The remote client interacts with the remote host over 
+    the encrypted connection.  
+    """  
+
 [bash]
 label = "Bash"
 
@@ -879,7 +906,7 @@ label = "Bash"
     alternatives = [
         "command output='file1' input='file2' error='file3'", 
         "command (file1 file2 file3) + (output, input, error)", 
-        "command echo$(output='file1', input='file2', error='file3')", 
+        "command echo $(output='file1', input='file2', error='file3')", 
     ] 
 
     [[bash.questions]]
@@ -899,6 +926,106 @@ label = "Bash"
         "free /home/user1", 
         "dsk -sp user1", 
     ] 
+
+    [[bash.questions]]
+    question = "Which of the following will give 4 lines with the 'echo output'"
+    answers = [
+        "for in in 1 2 3 4; do echo 'echo output'; done",
+        "for in in {1 2 3 4}; do echo 'echo output'; done",
+        "for in in [1 2 3 4]; do echo 'echo output'; done",
+    ]
+    alternatives = [
+        "for in in (1 2 3 4); do echo 'echo output'; done", 
+        "for in in {array[1 2 3 4]}; do echo 'echo output'; done", 
+        "for in in $(1 2 3 4); do echo 'echo output'; done", 
+        "for in in (1, 2, 3, 4); do echo 'echo output'; done",   
+        "for in in '1 2 3 4'; do echo 'echo output'; done",         
+    ]
+
+    [[bash.questions]]
+    question = "What will be the output for the command in the terminal: echo $0"
+    answers = ["the name of the current shell"]
+    alternatives = [
+        "You will get an error message", 
+        "An empty line", 
+        "The zero argument entered",       
+    ]
+    explanation = """
+    If the $0 special variable is used within a Bash script, it can be 
+    used to print its name and if it is used directly within the terminal, 
+    it can be used to display the name of the current shell. 
+    """
+    
+    [[bash.questions]]
+    question = "The following is entered in the Bash terminal:\nset -- a b c 4 && for i in 3 4 0 5; do echo ${!i}; done\nWhat will be the output"
+    answers = ["4 lines (4th is an empty line):\n     c\n     4\n     bash\n     "]
+    alternatives = [
+        "abc45", 
+        "4 lines:\n     a\n     b\n     c\n     4", 
+        "Error",       
+    ]
+    hint = "set --: If no arguments follow this option, then the positional\n      parameters are unset. Otherwise, the positional parameters are\n      set to the arguments, even if some of them begin with a '-'."    
+    explanation = """
+    The set command in Bash allows you to control the behavior of your 
+    scripts by managing specific flags and properties. These safeguards 
+    guarantee that your scripts are on the right track and that Bash's 
+    odd behavior does not cause problems. 
+    """
+
+    [[bash.questions]]
+    question = "How will you emulate: cat filename"
+    answers = ["while read line; do echo $line; done < filename"]
+    alternatives = [
+        "read filename", 
+        "for i in filename; do echo filename; done < filename", 
+        "printf filename", 
+        "export filename",        
+    ]  
+
+    [[bash.questions]]
+    question = "The following is entered in the terminal:\nread -r a b c <<< 'John Do 123 Main Str' && echo $c\nWhat will be the output"
+    answers = ["123 Main Str"]
+    alternatives = [
+        "Str", 
+        "John Do 123 Main Str", 
+        "Error message", 
+        "c",  
+        "An empty line",          
+    ] 
+    hint = "A here string is used: <<<"
+    explanation = """
+    A here string can be considered as a stripped-down form 
+    of a here document. It consists of nothing more than 
+    COMMAND <<< $WORD, where $WORD is expanded and fed to the 
+    stdin of COMMAND. 
+    """
+    
+    [[bash.questions]]
+    question = "The following is entered in the terminal:\ntouch file && [ -f file ] && echo 'Output 1' || echo 'Output 2'\nWhat will be the output"
+    answers = ["Output 1"]
+    alternatives = [
+        "Output 2", 
+        "Error message", 
+        "An empty line",          
+    ] 
+    explanation = """
+    [ -f file ] returns true if the file 'file' exists. 
+    """
+
+    [[bash.questions]]
+    question = "A script file is created with the following code:\n#!/bin/bash\n\nIFS=$'\\n'\nfor i in $(cat /etc/passwd); do\necho $i\ndone\n\nWhat will be the output after the script execution"
+    answers = ["The same as cat /etc/passwd line by line"]
+    alternatives = [
+        "Each character from the passwd file will be printed on\n     a separate line.", 
+        "Error message", 
+        "An empty line",          
+    ]
+    hint = "\\n is the escape sequence for a newline, so IFS ends up\n      being set to a single newline character."    
+    explanation = """
+    IFS stands for "internal field separator". It is used by the shell 
+    to determine how to do word splitting, i. e. how to recognize word 
+    boundaries.
+    """
 
 [git]
 label = "Version Control with GIT"
@@ -1255,7 +1382,7 @@ label = "Python"
     """
 
     [[python.questions]]
-    question = "Which command used for showing something on screen"
+    question = "Which command is used for showing something on screen"
     answers = ["print()"]
     alternatives = [
         "str()",
