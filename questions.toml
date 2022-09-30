@@ -930,16 +930,16 @@ label = "Bash"
     [[bash.questions]]
     question = "Which of the following will give 4 lines with the 'echo output'"
     answers = [
-        "for i in in 1 2 3 4; do echo 'echo output'; done",
-        "for i in in {1 2 3 4}; do echo 'echo output'; done",
-        "for i in in [1 2 3 4]; do echo 'echo output'; done",
+        "for i in 1 2 3 4; do echo 'echo output'; done",
+        "for i in {1 2 3 4}; do echo 'echo output'; done",
+        "for i in [1 2 3 4]; do echo 'echo output'; done",
     ]
     alternatives = [
-        "for i in in (1 2 3 4); do echo 'echo output'; done", 
-        "for i in in {array[1 2 3 4]}; do echo 'echo output'; done", 
-        "for i in in $(1 2 3 4); do echo 'echo output'; done", 
-        "for i in in (1, 2, 3, 4); do echo 'echo output'; done",   
-        "for i in in '1 2 3 4'; do echo 'echo output'; done",         
+        "for i in (1 2 3 4); do echo 'echo output'; done", 
+        "for i in {array[1 2 3 4]}; do echo 'echo output'; done", 
+        "for i in $(1 2 3 4); do echo 'echo output'; done", 
+        "for i in (1, 2, 3, 4); do echo 'echo output'; done",   
+        "for i in '1 2 3 4'; do echo 'echo output'; done",         
     ]
 
     [[bash.questions]]
