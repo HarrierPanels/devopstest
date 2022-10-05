@@ -1,135 +1,8 @@
 [basicnetworking]
-label = "Basic networking"
+label = "Basic networking Demo"
 
     [[basicnetworking.questions]]
-    question = "What is the name for a connecting of computers and local networks located\nat a remote distance to share worldwide information resources"
-    answers = ["global network"]
-    alternatives = ["corporate network", "regional network", "local network"]
-
-    [[basicnetworking.questions]]
-    question = "What does network topology define"
-    answers = [
-        "A description of the network configuration, diagram\n     and connection of network devices.",
-    ]
-    alternatives = [
-        "Diagram of location of computers in the network.", 
-        "Scheme of interaction of switching equipment.", 
-        "Network security technology.",
-    ]
-
-    [[basicnetworking.questions]]
-    question = "Which of the following are types of network topology"
-    answers = ["Bus, ring, star"]
-    alternatives = ["Straight, parallel, cross", "Topological, logical, mixed", "Vector, singularity, parallelism"]
-
-    [[basicnetworking.questions]]
-    question = "What does the effectiveness of computer communication usually depend on"
-    answers = ["All choices"]
-    alternatives = ["Channel thruput", "Amount of the computer's RAM", "Processor productivity"]
-
-    [[basicnetworking.questions]]
-    question = "What makes it impossible to connect a computer to a local network"
-    answers = ["Lack of network adapter"]
-    alternatives = ["Channel thruput", "Limited hard disk size", "No serial port"]
-
-    [[basicnetworking.questions]]
-    question = "What of the following transmission media are usually used\nin computer networks"
-    answers = ["All choices"]
-    alternatives = ["Radio", "Twisted pair", "Optical fiber"]
-
-    [[basicnetworking.questions]]
-    question = "What is the advantage of using a mesh topology"
-    answers = ["High reliability and fault tolerance"]
-    alternatives = ["Minimum number of connections", "Simple network scaling", "Low cost"]
-
-    [[basicnetworking.questions]]
-    question = "What topology is the basis of the global Internet"
-    answers = ["Mesh"]
-    alternatives = ["Star", "Tree", "Ring"]
-
-    [[basicnetworking.questions]]
-    question = "What is a MAC address"
-    answers = ["the physical address of the network interface"]
-    alternatives = [
-        "physical address of the computer",
-        "logical address of the computer",
-        "the logical address to which all packets on the network are sent",
-    ]
-
-    [[basicnetworking.questions]]
-    question = "What type of address directly ensures the delivery of frames\nbetween computers within a shared local network"
-    answers = ["MAC address"]
-    alternatives = ["IP address", "Domain name", "NetBIOS name"]
-
-    [[basicnetworking.questions]]
-    question = "How many bits are the length of a MAC address"
-    answers = ["48"]
-    alternatives = ["32", "128", "64"]
-
-    [[basicnetworking.questions]]
-    question = "Which layer of the OSI model is a MAC address associated with"
-    answers = ["data-link"]
-    alternatives = ["physical", "network", "transport"]
-
-    [[basicnetworking.questions]]
-    question = "Which layer of the OSI model is an IP address associated with"
-    answers = ["network"]
-    alternatives = ["physical", "data-link", "transport"]   
-
-    [[basicnetworking.questions]]
-    question = "What type of address directly ensures the delivery of packets\nbetween computers on the global Internet"
-    answers = ["IP address"]
-    alternatives = ["MAC address", "WEB address", "TCP address"]    
-    
-    [[basicnetworking.questions]]
-    question = "What does the prefix in the IP address indicate"
-    answers = ["the number of leading ones in the subnet mask"]
-    alternatives = [
-        "the number of leading zeros in the subnet mask",
-        "the maximum number of computers in the subnet",
-        "the maximum number of subnets",
-    ]    
-    
-    [[basicnetworking.questions]]
-    question = "What are the parts of an IP address in IPv4"
-    answers = ["network ID", "host ID"]
-    alternatives = ["manufacturer ID of the network adapter", "The IP address is not structured"]        
-    
-    [[basicnetworking.questions]]
-    question = "What is the number of bytes in an IPv4 address"
-    answers = ["4"]
-    alternatives = ["32", "8", "64"]     
-    
-    [[basicnetworking.questions]]
-    question = "How is an IPv6 address displayed"
-    answers = ["as hexadecimal numbers separated by ':'"]
-    alternatives = [
-        "as decimal numbers separated by dots",
-        "as binary numbers separated by ':'",
-        "as binary-decimal numbers separated by '-'",
-    ]
- 
-    [[basicnetworking.questions]]
-    question = "Which are the correct compact presentation forms for\nan IPv6 address FE80:0000:0000:0100:0000:0000:0000:0123"
-    answers = ["FE80:0:0:100::123", "FE80:0:0:100:0:0:0:123"]
-    alternatives = [
-        "FE80::100::123",
-        "FE80::1:0000:0000:0000:123",
-    ] 
- 
-    [[basicnetworking.questions]]
-    question = "What is a network prefix"
-    answers = [
-        "decimal number equal to the number of bits\n     of the subnet mask set to one",
-    ]
-    alternatives = [
-        "a hexadecimal number equal to the number of bits\n     of the subnet mask set to one", 
-        "a decimal number equal to the number of bits\n     of the subnet mask set to zero", 
-        "the first octet of the IP address",
-    ] 
- 
-    [[basicnetworking.questions]]
-    question = "Which addresses in any IPv4 network are always reserved?"
+    question = "Which addresses in any IPv4 network are always reserved"
     answers = ["network address", "broadcast address for this network"]
     alternatives = [
         "first available address for default gateway",
@@ -151,12 +24,7 @@ label = "Basic networking"
     on the network and discover neighboring devices. These are 
     the Network ID and the Broadcast IP address.
     """
-
-    [[basicnetworking.questions]]
-    question = "What decimal number is equivalent to a binary number 11111111"
-    answers = ["255"]
-    alternatives = ["16", "8", "64"]  
-    
+   
     [[basicnetworking.questions]]
     question = "Which of the following address ranges are private"
     answers = ["172.16.0.0/12", "10.0.0.0/8", "192.168.0.0/16"]
@@ -175,41 +43,12 @@ label = "Basic networking"
     Class C: 192.168.0.0 to 192.168.255.255
     """
     
-    [[basicnetworking.questions]]
-    question = "How is the boundary between the network and host portions of\nan IPv4 address defined in modern networks"
-    answers = ["using the network prefix", "using the subnet mask"]
-    alternatives = ["using classes", "the border is fixed and unchanging"]  
-
-    [[basicnetworking.questions]]
-    question = "What is the advantage of using a router in a local network"
-    answers = ["All choices"]
-    alternatives = ["Logical structuring of the network", "Improving network security", "Broadcast traffic filtering"]  
-
-    [[basicnetworking.questions]]
-    question = "Why do you need a default gateway"
-    answers = ["All packets addressed outside the subnet\n     are sent to this IP address"]
-    alternatives = [
-        "All packets sent to this IP address are bounced back",
-        "A host with this IP address matches the domain\n     name and IP address",
-        "From this IP address, the computer receives the IP address,\n     subnet mask, and DNS server settings",
-    ] 
-
-    [[basicnetworking.questions]]
-    question = "There are 2 rules in the routing table: 1. 10.0.0.0 255.255.255.0 10.0.0.1\nand 2. 10.0.0.0 255.255.255.240 10.0.0.2. Packets for recipient 10.0.0.8\nwill be sent to the gateway"
-    answers = ["10.0.0.2"]
-    alternatives = ["10.0.0.1", "10.0.0.0", "255.255.255.0", "255.255.255.240"] 
-
 [networkprotocols]
-label = "Network Protocols"
-
-    [[networkprotocols.questions]]
-    question = "A broadcast address at the data-link layer is: "
-    answers = ["FF:FF:FF:FF:FF:FF"]
-    alternatives = ["255.255.255.255", "00:00:00:00:00:00", "0.0.0.0"]  
+label = "Network Protocols Demo"
 
     [[networkprotocols.questions]]
     question = "Choose the correct statement: "
-    answers = ["The ARP protocol is designed to determine the MAC address\n     based on the IP address"]
+    answers = ["The ARP protocol is supposed to determine the MAC address\n     based on the IP address"]
     alternatives = [
         "ARP is running on port 53", 
         "ARP is used in both IPv4 and IPv6 networks", 
@@ -222,21 +61,7 @@ label = "Network Protocols"
     network (LAN). The physical machine address is also known as a media 
     access control (MAC) address.
     """
-
-    [[networkprotocols.questions]]
-    question = "The TCP protocol is: "
-    answers = ["reliable", "connection orientated"]
-    alternatives = ["lightweight", "correct", "faster then UDP"]  
-
-    [[networkprotocols.questions]]
-    question = "The sliding window mechanism in TCP is used for: "
-    answers = ["better utilization of network bandwidth"]
-    alternatives = [
-        "increasing the reliability of data delivery", 
-        "establishing a connection between the client and the server", 
-        "increasing the size of the data segment being transmitted",
-    ] 
-
+    
     [[networkprotocols.questions]]
     question = "The set SYN flag indicates that: "
     answers = ["the client and server go through the 'handshake' phase,\n     establishing the connection"]
@@ -253,93 +78,9 @@ label = "Network Protocols"
     process, TCP sends a TCP segment with the SYN flag set. Only the first 
     packet from both the sender and receiver should have this flag set.
     """
-    
-    [[networkprotocols.questions]]
-    question = "The UDP protocol is: "
-    answers = ["lightweight", "faster then TCP"]
-    alternatives = ["connection orientated", "correct"]  
-
-    [[networkprotocols.questions]]
-    question = "The UDP pseudo-header is used for: "
-    answers = ["checksum calculation"]
-    alternatives = ["formation of the IP header", "improvement of delivery reliability", "All choices"]  
-
-    [[networkprotocols.questions]]
-    question = "Choose the correct statements: "
-    answers = ["UDP transfers data faster than TCP", "UDP is used in streaming services and online games"]
-    alternatives = ["Minimum UDP header length is 6 bytes", "The checksum in UDP is mandatary"] 
-
-    [[networkprotocols.questions]]
-    question = "Choose the correct statements: "
-    answers = [
-        "Ping and traceroute use ICMP protocol", 
-        "If the recipient is out of network, the client will receive\n     an ICMP Destination unreachable message",
-    ]
-    alternatives = [
-        "If the ICMP message is lost, it is retransmitted", 
-        "ICMP is used to control the data rate on the network",
-    ] 
-
-    [[networkprotocols.questions]]
-    question = "Choose the correct statements: "
-    answers = [
-        "HTTP protocol runs on port 80 over TCP protocol", 
-        "Registered ports are assigned by IANA for specific service\n     upon application by a requesting entity",
-    ]
-    alternatives = [
-        "The total number of TCP ports is 1024", 
-        "Ephemeral ports used by system processes that provide\n     widely used types of network services",
-    ] 
-
-    [[networkprotocols.questions]]
-    question = "How is an IPv6 address displayed"
-    answers = ["as hexadecimal numbers separated by ':'"]
-    alternatives = [
-        "as decimal numbers separated by dots",
-        "as binary numbers separated by ':'",
-        "as binary-decimal numbers separated by '-'",
-    ]
 
 [subnetting]
-label = "Concept of Subnetting"
-
-    [[subnetting.questions]]
-    question = "What is the largest in capacity classful network"
-    answers = ["A"]
-    alternatives = ["B", "C", "D"] 
-
-    [[subnetting.questions]]
-    question = "The network class is determined by: "
-    answers = ["The first bits of the first byte of the IP address"]
-    alternatives = [
-        "Network mask/prefix", 
-        "The first bits of the last byte of the IP address", 
-        "Internet Services Provider",
-    ] 
-
-    [[subnetting.questions]]
-    question = "What class does an IP address 141.89.64.111 belong to"
-    answers = ["B"]
-    alternatives = ["A", "C", "D"] 
-
-    [[subnetting.questions]]
-    question = "Choose the correct statement: "
-    answers = ["All choices"]
-    alternatives = [
-        "Netmask cannot contain binary sequence 101", 
-        "The prefix indicates the number of ones in the netmask", 
-        "The mask allows to determine the address of the subnet\n     to which the IP address belongs",
-    ] 
-
-    [[subnetting.questions]]
-    question = "What is a binary form of decimal number 13"
-    answers = ["00001101"]
-    alternatives = ["10000001", "00000111", "00101000"] 
-
-    [[subnetting.questions]]
-    question = "What could be determined by the host IP address and subnet mask"
-    answers = ["All choices"]
-    alternatives = ["Network address", "Broadcast address", "Number of available addresses on a subnet"] 
+label = "Concept of Subnetting Demo"
 
     [[subnetting.questions]]
     question = "Formula for calculating the number of available host\naddresses in a subnet is: "
@@ -353,29 +94,10 @@ label = "Concept of Subnetting"
     """
 
     [[subnetting.questions]]
-    question = "Which IP addresses are private"
-    answers = ["192.168.1.1", "172.16.1.1"]
-    alternatives = ["127.0.0.1", "169.254.1.1"] 
-
-    [[subnetting.questions]]
-    question = "Choose the correct statement: "
-    answers = ["Packets from private networks are not routed to the Internet"]
-    alternatives = [
-        "The use of private networks led to a rapid depletion\n     of the pool of IP addresses", 
-        "Access from a private network to the Internet is not possible", 
-        "All choices",
-    ] 
-
-    [[subnetting.questions]]
     question = "The last byte of the network IP address is 160,\nthe last byte of the subnet mask is 224.\nCalculate the last byte of the broadcast address for this subnet"
     answers = ["191"]
     alternatives = ["192", "161", "159"] 
     hint = "for .224 mask prefix is /27"
-
-    [[subnetting.questions]]
-    question = "Which IPv4 addresses can be assigned to devices"
-    answers = ["192.168.0.1/24", "172.168.20.111/8", "1.1.1.1/30", "100.100.1.0/15"]
-    alternatives = ["10.10.256.11/12", "10.255.255.255/16"]
 
     [[subnetting.questions]]
     question = "What does VLSM stand for"
@@ -427,40 +149,12 @@ label = "Concept of Subnetting"
     """
 
 [vlan]
-label = "Virtual LAN"
-
-    [[vlan.questions]]
-    question = "VLANs are used for: "
-    answers = ["All choices"]
-    alternatives = [
-        "Networks segmentation based on factors such as\n     function, project team, or application", 
-        "Networks segmentation without regard for the\n     physical location of the user or device", 
-        "Network security improvement",
-    ] 
+label = "Virtual LAN Demo"
 
     [[vlan.questions]]
     question = "The total number of VLANs is: "
     answers = ["4096"]
     alternatives = ["256", "1024", "65535"] 
-
-    [[vlan.questions]]
-    question = "Select the correct location of the VLAN tag\nin the Ethernet frame: "
-    answers = ["Between source address and type"]
-    alternatives = ["Before Ethernet header", "After checksum", "Between data and checksum"] 
-
-    [[vlan.questions]]
-    question = "The VLAN tag length is: "
-    answers = ["4 bytes"]
-    alternatives = ["4 bits", "8 bit", "32 bytes"] 
-
-    [[vlan.questions]]
-    question = "Choose the correct statement: "
-    answers = ["Port in access mode works with untagged traffic"]
-    alternatives = [
-        "Switch port can work in access, trunk or dual mode", 
-        "To work with VLAN end devices must be able to read\n     the VLAN tag", 
-        "Tags allow packets to be routed between VLANs\n     without using router",
-    ] 
 
     [[vlan.questions]]
     question = "Choose the correct statement: "
@@ -481,72 +175,18 @@ label = "Virtual LAN"
     """
 
 [dhcp]
-label = "DHCP"
-
-    [[dhcp.questions]]
-    question = "What is DHCP"
-    answers = ["A network protocol that allows computers to automatically\n     obtain an IP address and other network settings\n     needed to operate on a TCP/IP network."]
-    alternatives = [
-        "The service of matching NetBIOS names of computers with\n     IP addresses of hosts.", 
-        "Service for updating operating systems and Microsoft products.", 
-        "A domain name system that associates domain names with\n     the IP addresses of computers corresponding to those domains.",
-    ] 
-
-    [[dhcp.questions]]
-    question = "What address allocation methods does the DHCP service use"
-    answers = ["All choices"]
-    alternatives = ["Manual Allocation", "Automatic Allocation", "Dynamic Allocation"] 
+label = "DHCP Demo"
 
     [[dhcp.questions]]
     question = "What type of request is used to obtain an address via DHCP"
     answers = ["broadcast"]
     alternatives = ["multicast", "unicast", "anycast"] 
-
-    [[dhcp.questions]]
-    question = "What are DHCP Service Message Types"
-    answers = ["DHCPDISCOVER", "DHCPOFFER", "DHCPACK", "DHCPREQUEST"]
-    alternatives = ["DHCPORDER", "DHCPSERVER"] 
-    
-    [[dhcp.questions]]
-    question = "Choose the correct order of requests and responses\nwhen obtaining an IP address via DHCP: "
-    answers = ["DHCPDISCOVER - DHCPOFFER - DHCPREQUEST - DHCPACK"]
-    alternatives = [
-        "DHCPDISCOVER - DHCPOFFER - DHCPACK - DHCPREQUEST", 
-        "DHCPSERVER - DHCPDISCOVER - DHCPOFFER - DHCPACK", 
-        "DHCPDISCOVER - DHCPOFFER - DHCPORDER - DHCPACK",
-    ]     
-    
-    [[dhcp.questions]]
-    question = "What network settings can be obtained via DHCP"
-    answers = ["IP address", "Subnet mask", "DNS server address", "Default gateway"]
-    alternatives = ["Administrator Password", "MAC address"]     
-    
-    [[dhcp.questions]]
-    question = "What is the source IP address in the DHCPDISCOVER packet"
-    answers = ["0.0.0.0"]
-    alternatives = ["192.168.0.0", "255.255.255.255", "192.168.0.1"]     
-    
+   
     [[dhcp.questions]]
     question = "What is the destination IP address in the DHCPDISCOVER packet"
     answers = ["255.255.255.255"]
     alternatives = ["192.168.0.255", "0.0.0.0", "192.168.0.1"]    
-    
-    [[dhcp.questions]]
-    question = "What are the benefits of Using DHCP"
-    answers = [
-        "DHCP minimizes configuration errors caused by manually\n     configuring an IP address, such as typos or address\n     conflicts.",
-        "Centralized and automatic TCP/IP configuration for all\n     clients on the network.",
-    ]
-    alternatives = [
-        "Improved network security.", 
-        "Reduction of service traffic.",
-    ] 
-    
-    [[dhcp.questions]]
-    question = "What protocol and ports does the DHCP service use"
-    answers = ["UDP 67/68"]
-    alternatives = ["TCP 67/68", "ICMP 1/2", "TCP 80/443", "TCP 53"]     
-    
+       
     [[dhcp.questions]]
     question = "What identifier does the DHCP server use to reserve\nan IP address for the client"
     answers = ["MAC address of the network adapter of client\n     computer"]
@@ -557,55 +197,12 @@ label = "DHCP"
     ]    
 
     [[dhcp.questions]]
-    question = "What are the methods in which IPv6 global unicast\naddresses can be assigned without special server"
-    answers = ["SLAAC and DHCPv6", "Stateless Address Autoconfiguration"]
-    alternatives = ["DNS", "Stateful DHCPv6"] 
-
-    [[dhcp.questions]]
     question = "When a computer sends DHCP requests and does not\nreceive a response, from which subnet does the computer\nautomatically generate an IP address"
     answers = ["169.254.0.0/16"]
     alternatives = ["10.0.0.0/8", "172.16.0.0/12", "192.168.0.0/16"] 
 
 [dns]
-label = "DNS"
-
-    [[dns.questions]]
-    question = "What is DNS"
-    answers = ["The system, which associates domain names with the\n     IP addresses of hosts."]
-    alternatives = [
-        "A database that stores information about users, PCs, servers,\n     network and peripheral devices.", 
-        "The service of matching NetBIOS names of computers with IP\n     addresses of hosts.", 
-        "Service for updating operating systems and Microsoft products",
-    ]  
-
-    [[dns.questions]]
-    question = "What protocols and ports are used by DNS"
-    answers = ["TCP/UDP 53"]
-    alternatives = ["TCP/ICMP 80", "TCP/UDP 8080", "TCP/UDP 123"] 
-
-    [[dns.questions]]
-    question = "What are the types of queries that the DNS service uses"
-    answers = ["Recursive", "Iterative", "Reverse"]
-    alternatives = ["Authoritative", "Caching"] 
-
-    [[dns.questions]]
-    question = "What are the types of DNS servers"
-    answers = ["Recursive resolver", "Root nameserver", "TLD nameserver", "Authoritative nameserver"]
-    alternatives = ["Remote nameserver", "Iterative nameserver"] 
-
-    [[dns.questions]]
-    question = "Choose the right DNS query definitions: "
-    answers = [
-        "A recursive query sends a domain name to the DNS server\n     and asks to return the IP address of the requested domain.\n     In this case, the server can access other DNS servers.",
-        "An iterative query sends a domain name to a DNS server\n     and asks to return either the IP address of that domain\n     or the name of another DNS server.",
-        "The reverse request sends an IP and asks to return the\n     domain name.",       
-    ]
-    alternatives = ["An iterative request expects a final response\n     from the server to which it is directed."]   
-
-    [[dns.questions]]
-    question = "A DNS cache is used for: "
-    answers = ["reducing of request service time", "reducing the workload of authoritative servers"]
-    alternatives = ["DNS service security improvements", "reducing the number of DNS servers"]     
+label = "DNS Demo"
  
     [[dns.questions]]
     question = "What are the DNS Records types"
@@ -644,20 +241,6 @@ label = "DNS"
     alternatives = ["A", "NS", "PTR", "CNAME", "MAILEX"] 
     
     [[dns.questions]]
-    question = "What utility can be used to identify problems\nassociated with DNS name resolution"
-    answers = ["Nslookup"]
-    alternatives = ["Ping", "Netstat", "Tracert"] 
-
-    [[dns.questions]]
-    question = "Choose the correct statements about DNS security extensions: "
-    answers = [
-        "It strengthens authentication in DNS using digital signatures",
-        "Every DNS zone has a public/private key pair",
-        "The zone owner uses the zone's private key to sign DNS data",       
-    ]
-    alternatives = ["DNS queries and responses themselves are cryptographically signed"] 
-
-    [[dns.questions]]
     question = "Choose the correct sequence of queries to DNS servers\nto resolve a domain name"
     answers = ["Client - Recursive resolver - Root- TLD - Authoritative"]
     alternatives = [
@@ -676,7 +259,7 @@ label = "DNS"
     ]   
 
 [linux]
-label = "CentOS Linux"
+label = "CentOS Linux Demo"
 
     [[linux.questions]]
     question = "Please check Linux distributions in the following OS list: "
@@ -692,113 +275,6 @@ label = "CentOS Linux"
     question = "Which of the following could be configured during CentOS installation"
     answers = ["All choices"]
     alternatives = ["network", "users", "disk partitioning", "time", "language"] 
-
-    [[linux.questions]]
-    question = "Could CentOs be installed on both bare metal and hypervisor"
-    answers = ["True"]
-    alternatives = ["False"] 
-
-    [[linux.questions]]
-    question = "The follwing shells are present in CentOS installation by default: "
-    answers = ["bash", "sh"]
-    alternatives = ["ksh", "zsh", "csh"] 
-
-    [[linux.questions]]
-    question = "man command is used to: "
-    answers = ["display command usage examples", "displaying information about a command"]
-    alternatives = ["user creation", "listing contents of current directory", "groups creation"] 
-
-    [[linux.questions]]
-    question = "ls -la ~ command does the following: "
-    answers = ["lists contents of user's home directory including\n     hidden files and file attributes"]
-    alternatives = [
-        "lists contents of current directory", 
-        "lists contents of user's home directory", 
-        "lists contents of current direcory including hidden files",
-    ] 
-
-    [[linux.questions]]
-    question = "cd .. command does the following: "
-    answers = ["changes context to the parent directory of the current directory"]
-    alternatives = [
-        "creates .. directory", 
-        "renames current directory", 
-        "changes context to user's home directory",
-    ] 
-
-    [[linux.questions]]
-    question = "Linux file system is represented as: "
-    answers = ["directory structure"]
-    alternatives = ["logical disks structure"] 
-
-    [[linux.questions]]
-    question = "New storage devices can be mounted: "
-    answers = ["to any directory on the system"]
-    alternatives = ["as a separate logical disk in which directories can\n     be created"] 
-
-    [[linux.questions]]
-    question = "File named 'link' was created using 'ln -s file link' command.\nFile 'file' was deleted afterwards. Attempting to open\n'link' file will: "
-    answers = ["throw an error because soft links depend on original file"]
-    alternatives = ["open the file because hard links do not depend on original file"] 
-
-    [[linux.questions]]
-    question = "Command 'cp ../dir/ ./' will: "
-    answers = ["throw an error"]
-    alternatives = [
-        "copy folder dir to current directory", 
-        "copy folder dir to user's home directory", 
-        "move folder dir and all its files to current directory",
-    ] 
-
-    [[linux.questions]]
-    question = "File 'script' was created. To make this file executable we need to: "
-    answers = ["grant +x permissions using chmod command"]
-    alternatives = [
-        "add .sh extention to file name", 
-        "add #!/bin/bash at the beginning of the file", 
-    ] 
-
-    [[linux.questions]]
-    question = "Following entities are part of Linux permission model: "
-    answers = ["users", "groups"]
-    alternatives = ["organizational units", "subgroups"] 
-
-    [[linux.questions]]
-    question = "What do 754 permissions on a file mean"
-    answers = ["owner can read, write, execute; owner group can read,\n     execute; everyone else can read"]
-    alternatives = [
-        "owner can read, execute; owner group can read;\n     everyone else can execute", 
-        "owner can read, write, execute; owner group can\n     read, write; everyone else can write", 
-    ] 
-
-    [[linux.questions]]
-    question = "Which tools can be used for memory diagnostics"
-    answers = ["top", "free"]
-    alternatives = ["iostat", "netstat"] 
-
-    [[linux.questions]]
-    question = "File in Linux can have this many owner groups: "
-    answers = ["one"]
-    alternatives = ["two - primary and secondary"] 
-
-    [[linux.questions]]
-    question = "Which of the following directives in systemd unit file\nare required for unit to be valid"
-    answers = ["ExecStart"]
-    alternatives = ["Alias", "ExecStop", "Restart"] 
-
-
-    [[linux.questions]]
-    question = "/etc/resolv.conf file is responsible for: "
-    answers = ["specifying the IP addresses of DNS servers and the search\n     domain"]
-    alternatives = [
-        "resolving hostnames that cannot be resolved any other way", 
-        "specifyinh routing and host information for all network\n     interfaces", 
-    ] 
-
-    [[linux.questions]]
-    question = "The following ssh config file is present on the system:\nHost test\nHostName 192.168.0.1\nIdentityFile ~/.ssh/test.pem\nWhich commands will allow us to ssh to 'test' host\nunder root user"
-    answers = ["ssh -i ~/.ssh/test.pem root@192.168.0.1", "ssh root@test"]
-    alternatives = ["ssh test", "ssh -i ~/.ssh/test.pem test", "ssh root@192.168.0.1"] 
 
     [[linux.questions]]
     question = "What steps are involved in creating an SSH session"
@@ -828,28 +304,7 @@ label = "CentOS Linux"
     """  
 
 [bash]
-label = "Bash"
-
-    [[bash.questions]]
-    question = "What shebang is wrong"
-    answers = ["All choices are valid"]
-    alternatives = [
-        "#!/bin/bash", 
-        "#!/usr/bin/env bash", 
-        "#!/bin/sh", 
-        "#!/usr/bin/env python3",
-        "All choices are invalid",
-    ] 
-
-    [[bash.questions]]
-    question = "Which special variable would store the exit status for all commands"
-    answers = ["$?"]
-    alternatives = ["$0", "$@", "$$", "$#"] 
-
-    [[bash.questions]]
-    question = "How to Exit immediately if a command exits with a non-zero\nstatus and Print commands and their arguments as they\nare executed"
-    answers = ["set -ex"]
-    alternatives = ["set +ex", "set +e -x", "set -e +x", "set -ep"] 
+label = "Bash Demo"
 
     [[bash.questions]]
     question = "How many lines with Hello are in output:\ngreet() { for i in `seq $1`; do echo Hello $i; done } && greet '2 5'"
@@ -861,25 +316,6 @@ label = "Bash"
     in steps of INCREMENT. By default, each number is printed on a separate 
     line.
     """
-
-    [[bash.questions]]
-    question = "What does > do in the BASH shell"
-    answers = ["Redirects output to a new or existing file and writes\n     to the beginning of the file"]
-    alternatives = [
-        "Redirects output to a new or existing file and appends to the\n     end of the file", 
-        "Redirects output to an new file only", 
-        "Redirects output to an existing file only", 
-    ] 
-
-    [[bash.questions]]
-    question = "Which of the following commands would try to stop a process"
-    answers = ["kill PID"]
-    alternatives = ["stop PID", "exit PID", "ps PID"] 
-
-    [[bash.questions]]
-    question = "Which of the following commands would set the default rw\npermission to all users on every file which is created in\nthe current shell"
-    answers = ["umask 0000"]
-    alternatives = ["umask 888", "umask 777", "umask 555"] 
 
     [[bash.questions]]
     question = "Command used to count the number of characters in a file is: "
@@ -1028,27 +464,7 @@ label = "Bash"
     """
 
 [git]
-label = "Version Control with GIT"
-
-    [[git.questions]]
-    question = "Where are a pair of ssh keys put to when generating on\nWindows via ssh-keygen?"
-    answers = ["C:/Users/User_Name/.ssh"]
-    alternatives = ["C:/ssh", "C:/Program Data/.ssh", "C:/Windows/system32/.ssh"] 
-    hint = "This is a hidden folder about Unix rules (the name begins with a dot)"
-
-    [[git.questions]]
-    question = "Is it possible to use ssh-keygen to create an ssh key without a password"
-    answers = ["Yes, just by pressing Enter instead of entering a password"]
-    alternatives = ["No, password is required, it's ssh"] 
-
-    [[git.questions]]
-    question = "Which of the two ssh keys cannot be transferred to anyone"
-    answers = ["Private (file id_rsa)"]
-    alternatives = ["Public (file id_rsa.pub)"] 
-    explanation = """
-    The private key cannot be transferred - otherwise the recipient will 
-    be able to sign commits on your behalf and send it to your repositories. 
-    """
+label = "Version Control with GIT Demo"
 
     [[git.questions]]
     question = "Which command do you need to use to specify your user.name\nand user.email in git"
