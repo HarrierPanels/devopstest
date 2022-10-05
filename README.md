@@ -1,6 +1,6 @@
-EPAM DevOps Essentials Quizz & Knowledge Check tests!
+DevOps Essentials Quizz!
 
-For those of you who would like to go thru all DevOps Essentials quizzes and Knowledge Checks before a final L0 test I put them all in a Python script. There are 2 files that you have to place in the same directory: epamtest.py & questions.toml
+There are 2 files that you have to place in the same directory: epamtest.py & questions.toml
  
 You can run the script from shell (Python virtual environment activated) as follows: 
 
